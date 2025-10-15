@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divya Raksha - Spiritual Protection & Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --dark-bg: #0A0E17;
+            --card-bg: #1A1F2E;
+            --accent: #FF7B54;
+            --accent-light: #FF9A76;
+            --text-light: #FFFFFF;
+            --text-gray: #A0AEC0;
+            --divider: #2D3748;
+            --header-bg: #151A28;
+            --header-glow: linear-gradient(135deg, #FF7B54 0%, #8B5FBF 50%, #4FD1C7 100%);
+            --ai-color: #4FD1C7;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-light);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Unique Header Styles */
+        header {
+            background: var(--header-bg);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 3px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--header-glow);
+            animation: headerGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes headerGlow {
+            0% {
+                background: linear-gradient(90deg, #FF7B54, #8B5FBF);
+                background-size: 200% 100%;
+                background-position: 0% 50%;
+            }
+            100% {
+                background: linear-gradient(90deg, #8B5FBF, #4FD1C7);
+                background-size: 200% 100%;
+                background-position: 100% 50%;
+            }
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo i {
+            font-size: 32px;
+            background: var(--header-glow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: logoSpin 8s linear infinite;
+        }
+
+        @keyframes logoSpin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 700;
+            background: var(--header-glow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 8px 16px;
+            border-radius: 6px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        nav a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        nav a:hover::before {
+            width: 100%;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--text-light);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--dark-bg) 0%, #151A28 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 20%, rgba(255, 123, 84, 0.1) 0%, transparent 50%);
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 52px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .hero p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            color: var(--text-gray);
+        }
+
+        .divider {
+            height: 3px;
+            width: 120px;
+            background: linear-gradient(to right, var(--accent), var(--accent-light));
+            margin: 30px auto;
+            border-radius: 2px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(to right, var(--accent), var(--accent-light));
+            color: var(--text-light);
+            padding: 16px 36px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(255, 123, 84, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 25px rgba(255, 123, 84, 0.5);
+        }
+
+        /* Main Content */
+        main {
+            flex: 1;
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            font-size: 18px;
+            color: var(--text-gray);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .solution-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            border: 1px solid var(--divider);
+        }
+
+        .solution-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            border-color: var(--accent);
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, var(--card-bg) 0%, #232838 100%);
+            color: var(--text-light);
+            padding: 30px 25px;
+            text-align: center;
+            border-bottom: 1px solid var(--divider);
+        }
+
+        .card-header i {
+            font-size: 42px;
+            margin-bottom: 20px;
+            display: block;
+            color: var(--accent);
+        }
+
+        .card-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        .card-body {
+            padding: 30px;
+        }
+
+        .card-body p {
+            margin-bottom: 25px;
+            font-size: 16px;
+            color: var(--text-gray);
+            line-height: 1.7;
+        }
+
+        .solution-list {
+            list-style-type: none;
+            margin-top: 20px;
+        }
+
+        .solution-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--divider);
+            display: flex;
+            align-items: center;
+        }
+
+        .solution-list li:last-child {
+            border-bottom: none;
+        }
+
+        .solution-list i {
+            color: var(--accent);
+            margin-right: 12px;
+            font-size: 16px;
+        }
+
+        /* Sadhana Section */
+        .sadhana-section {
+            margin: 80px 0;
+        }
+
+        .sadhana-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .sadhana-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 35px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--divider);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .sadhana-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            border-color: var(--accent);
+        }
+
+        .sadhana-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 25px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            color: var(--text-light);
+        }
+
+        .sadhana-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--text-light);
+        }
+
+        .sadhana-card p {
+            color: var(--text-gray);
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .sadhana-benefits {
+            list-style: none;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .sadhana-benefits li {
+            padding: 8px 0;
+            color: var(--text-gray);
+            display: flex;
+            align-items: center;
+        }
+
+        .sadhana-benefits i {
+            color: var(--accent);
+            margin-right: 10px;
+            font-size: 14px;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 50px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            margin-top: 40px;
+            border: 1px solid var(--divider);
+        }
+
+        .contact-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .contact-section p {
+            max-width: 600px;
+            margin: 0 auto 40px;
+            font-size: 18px;
+            color: var(--text-gray);
+        }
+
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+            color: var(--text-light);
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 16px 20px;
+            background: var(--dark-bg);
+            border: 1px solid var(--divider);
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            color: var(--text-light);
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(255, 123, 84, 0.2);
+        }
+
+        .form-group input::placeholder {
+            color: var(--text-gray);
+        }
+
+        .privacy-note {
+            font-size: 14px;
+            color: var(--text-gray);
+            margin-top: 20px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: var(--card-bg);
+            color: var(--text-light);
+            padding: 60px 0 30px;
+            border-top: 1px solid var(--divider);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 20px;
+            margin-bottom: 25px;
+            color: var(--accent);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--text-gray);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+            padding-left: 5px;
+        }
+
+        .footer-links i {
+            width: 20px;
+            text-align: center;
+        }
+
+        .ai-tool-link {
+            color: var(--ai-color) !important;
+            font-weight: 600;
+        }
+
+        .ai-tool-link:hover {
+            color: var(--ai-color) !important;
+            text-shadow: 0 0 8px rgba(79, 209, 199, 0.5);
+        }
+
+        .ai-tool-link i {
+            animation: aiPulse 2s infinite;
+        }
+
+        @keyframes aiPulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .donation-section {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(255, 123, 84, 0.1) 0%, rgba(139, 95, 191, 0.1) 100%);
+            border-radius: 12px;
+            border: 1px solid var(--divider);
+        }
+
+        .donation-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--text-light);
+        }
+
+        .donation-section p {
+            color: var(--text-gray);
+            margin-bottom: 25px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        .donate-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #4FD1C7, #38B2AC);
+            color: var(--text-light);
+            padding: 14px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(79, 209, 199, 0.3);
+        }
+
+        .donate-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(79, 209, 199, 0.5);
+            background: linear-gradient(135deg, #38B2AC, #4FD1C7);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid var(--divider);
+            color: var(--text-gray);
+            font-size: 14px;
+        }
+
+        /* AI Tool Modal */
+        .ai-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(10, 14, 23, 0.9);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ai-modal-content {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 40px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            border: 2px solid var(--ai-color);
+            box-shadow: 0 10px 40px rgba(79, 209, 199, 0.3);
+            position: relative;
+        }
+
+        .ai-modal-close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 24px;
+            color: var(--text-gray);
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .ai-modal-close:hover {
+            color: var(--ai-color);
+        }
+
+        .ai-modal-icon {
+            font-size: 48px;
+            color: var(--ai-color);
+            margin-bottom: 20px;
+        }
+
+        .ai-modal h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: var(--text-light);
+        }
+
+        .ai-modal p {
+            color: var(--text-gray);
+            margin-bottom: 25px;
+            line-height: 1.7;
+        }
+
+        .ai-features {
+            list-style: none;
+            text-align: left;
+            margin: 25px 0;
+        }
+
+        .ai-features li {
+            padding: 10px 0;
+            color: var(--text-gray);
+            display: flex;
+            align-items: center;
+        }
+
+        .ai-features i {
+            color: var(--ai-color);
+            margin-right: 12px;
+            font-size: 16px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 42px;
+            }
+            
+            .hero p {
+                font-size: 18px;
+            }
+            
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background: var(--card-bg);
+                padding: 20px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+                border: 1px solid var(--divider);
+            }
+            
+            nav ul.show {
+                display: flex;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-section {
+                padding: 30px 20px;
+            }
+            
+            .solutions-grid, .sadhana-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-lotus"></i>
+                    <div class="logo-text">Divya Raksha</div>
+                </div>
+                <nav>
+                    <div class="mobile-menu">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#solutions">Solutions</a></li>
+                        <li><a href="#sadhana">Sadhana</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Nazar Dosh, Negative Energy & Vashikaran</h1>
+            <div class="divider"></div>
+            <p>Here are some helpful solutions</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <div class="solutions-grid" id="solutions">
+                <!-- Nazar Dosh Card -->
+                <div class="solution-card">
+                    <div class="card-header">
+                        <i class="fas fa-eye"></i>
+                        <h2>Nazar Dosh</h2>
+                    </div>
+                    <div class="card-body">
+                        <p>Remedies to protect against the evil eye and negative influences from others.</p>
+                        <ul class="solution-list">
+                            <li><i class="fas fa-check-circle"></i> Lemon and chili protection ritual</li>
+                            <li><i class="fas fa-check-circle"></i> Black thread and kala tikka remedies</li>
+                            <li><i class="fas fa-check-circle"></i> Protective gemstones and yantras</li>
+                            <li><i class="fas fa-check-circle"></i> Daily protective mantras</li>
+                        </ul>
+                        <a href="#contact" class="btn">Get Solution</a>
+                    </div>
+                </div>
+
+                <!-- Negative Energy Card -->
+                <div class="solution-card">
+                    <div class="card-header">
+                        <i class="fas fa-bolt"></i>
+                        <h2>Negative Energy</h2>
+                    </div>
+                    <div class="card-body">
+                        <p>Steps to clear negative energy around you and create a positive environment.</p>
+                        <ul class="solution-list">
+                            <li><i class="fas fa-check-circle"></i> Space cleansing with sage and incense</li>
+                            <li><i class="fas fa-check-circle"></i> Salt water purification techniques</li>
+                            <li><i class="fas fa-check-circle"></i> Crystal energy clearing methods</li>
+                            <li><i class="fas fa-check-circle"></i> Positive affirmation practices</li>
+                        </ul>
+                        <a href="#contact" class="btn">Get Solution</a>
+                    </div>
+                </div>
+
+                <!-- Vashikaran Card -->
+                <div class="solution-card">
+                    <div class="card-header">
+                        <i class="fas fa-magnet"></i>
+                        <h2>Vashikaran</h2>
+                    </div>
+                    <div class="card-body">
+                        <p>Techniques to attract positivity, love, and success into your life.</p>
+                        <ul class="solution-list">
+                            <li><i class="fas fa-check-circle"></i> Mantras for attraction and influence</li>
+                            <li><i class="fas fa-check-circle"></i> Yantra meditation for specific goals</li>
+                            <li><i class="fas fa-check-circle"></i> Rituals for relationship harmony</li>
+                            <li><i class="fas fa-check-circle"></i> Positive energy attraction techniques</li>
+                        </ul>
+                        <a href="#contact" class="btn">Get Solution</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sadhana Section -->
+            <section class="sadhana-section" id="sadhana">
+                <div class="section-title">
+                    <h2>Spiritual Sadhana</h2>
+                    <p>Discover the path to spiritual growth and inner transformation through daily practices</p>
+                </div>
+
+                <div class="sadhana-grid">
+                    <div class="sadhana-card">
+                        <div class="sadhana-icon">
+                            <i class="fas fa-om"></i>
+                        </div>
+                        <h3>Mantra Sadhana</h3>
+                        <p>Powerful chanting practices for spiritual elevation and manifestation</p>
+                        <ul class="sadhana-benefits">
+                            <li><i class="fas fa-check"></i> Purifies mind and consciousness</li>
+                            <li><i class="fas fa-check"></i> Creates positive vibrations</li>
+                            <li><i class="fas fa-check"></i> Enhances spiritual connection</li>
+                            <li><i class="fas fa-check"></i> Manifests desires through sound</li>
+                        </ul>
+                    </div>
+
+                    <div class="sadhana-card">
+                        <div class="sadhana-icon">
+                            <i class="fas fa-yin-yang"></i>
+                        </div>
+                        <h3>Meditation Practices</h3>
+                        <p>Various meditation techniques for inner peace and self-realization</p>
+                        <ul class="sadhana-benefits">
+                            <li><i class="fas fa-check"></i> Reduces stress and anxiety</li>
+                            <li><i class="fas fa-check"></i> Increases focus and clarity</li>
+                            <li><i class="fas fa-check"></i> Connects with higher self</li>
+                            <li><i class="fas fa-check"></i> Awakens spiritual awareness</li>
+                        </ul>
+                    </div>
+
+                    <div class="sadhana-card">
+                        <div class="sadhana-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <h3>Yagna & Havan</h3>
+                        <p>Sacred fire rituals for purification and spiritual transformation</p>
+                        <ul class="sadhana-benefits">
+                            <li><i class="fas fa-check"></i> Clears negative energies</li>
+                            <li><i class="fas fa-check"></i> Invokes divine blessings</li>
+                            <li><i class="fas fa-check"></i> Fulfills wishes and desires</li>
+                            <li><i class="fas fa-check"></i> Creates protective shield</li>
+                        </ul>
+                    </div>
+
+                    <div class="sadhana-card">
+                        <div class="sadhana-icon">
+                            <i class="fas fa-book-open"></i>
+                        </div>
+                        <h3>Scripture Study</h3>
+                        <p>Learning from ancient texts for wisdom and spiritual guidance</p>
+                        <ul class="sadhana-benefits">
+                            <li><i class="fas fa-check"></i> Gains spiritual knowledge</li>
+                            <li><i class="fas fa-check"></i> Understands life's purpose</li>
+                            <li><i class="fas fa-check"></i> Receives divine guidance</li>
+                            <li><i class="fas fa-check"></i> Develops right understanding</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <div class="contact-section" id="contact">
+                <h2>Get in Touch</h2>
+                <p>Enter your email to receive personalized spiritual guidance</p>
+                
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="email">Enter your email</label>
+                        <input type="email" id="email" placeholder="Your email address" required>
+                    </div>
+                    <button type="submit" class="btn">Get Solutions</button>
+                    <p class="privacy-note">We will never share your email with anyone else.</p>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Divya Raksha</h3>
+                    <p style="color: var(--text-gray);">Providing spiritual solutions and protection through ancient practices.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+                        <li><a href="#solutions"><i class="fas fa-shield-alt"></i> Solutions</a></li>
+                        <li><a href="#sadhana"><i class="fas fa-om"></i> Sadhana</a></li>
+                        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+                        <!-- AI Tool Link Added Here -->
+                        <li><a href="#" class="ai-tool-link" id="aiToolBtn"><i class="fas fa-robot"></i> AI Spiritual Guide</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Our Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-eye"></i> Nazar Dosh Protection</a></li>
+                        <li><a href="#"><i class="fas fa-bolt"></i> Negative Energy Removal</a></li>
+                        <li><a href="#"><i class="fas fa-magnet"></i> Vashikaran Solutions</a></li>
+                        <li><a href="#"><i class="fas fa-heart"></i> Love & Relationship</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="footer-links">
+                        <li><a href="mailto:help@divyaraksha.com"><i class="fas fa-envelope"></i> help@divyaraksha.com</a></li>
+                        <li><a href="https://facebook.com/divyaraksha" target="_blank"><i class="fab fa-facebook"></i> Divya Raksha</a></li>
+                        <li><a href="https://instagram.com/divyaraksha" target="_blank"><i class="fab fa-instagram"></i> @divyaraksha</a></li>
+                        <li><a href="https://wa.me/1234567890" target="_blank"><i class="fab fa-whatsapp"></i> +1 234 567 890</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Donation Section -->
+            <div class="donation-section">
+                <h3>Support Our Spiritual Mission</h3>
+                <p>If our spiritual guidance has helped you and you'd like to support our mission of providing free spiritual knowledge to all, consider making a voluntary donation. Your kindness helps maintain this platform and reach more seekers.</p>
+                <p><em>This is completely optional and depends solely on your generosity.</em></p>
+                <a href="#" class="donate-btn">
+                    <i class="fas fa-heart"></i>
+                    Donate to Support
+                </a>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2023 Divya Raksha. All rights reserved. | Spiritual Solutions for Modern Problems</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI Tool Modal -->
+    <div class="ai-modal" id="aiModal">
+        <div class="ai-modal-content">
+            <span class="ai-modal-close" id="aiModalClose">&times;</span>
+            <div class="ai-modal-icon">
+                <i class="fas fa-robot"></i>
+            </div>
+            <h3>AI Spiritual Guide</h3>
+            <p>Our intelligent spiritual assistant can help you with personalized guidance based on ancient wisdom and modern understanding.</p>
+            
+            <ul class="ai-features">
+                <li><i class="fas fa-check"></i> Personalized mantra recommendations</li>
+                <li><i class="fas fa-check"></i> Daily spiritual practice guidance</li>
+                <li><i class="fas fa-check"></i> Answer your spiritual questions</li>
+                <li><i class="fas fa-check"></i> Suggest remedies for specific problems</li>
+            </ul>
+            
+            <p><strong>Coming Soon!</strong> We're developing this AI tool to make spiritual guidance more accessible to everyone.</p>
+            <button class="btn" style="background: linear-gradient(135deg, var(--ai-color), #38B2AC); margin-top: 20px;">
+                <i class="fas fa-bell"></i> Notify Me When Ready
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+
+        // Form submission handling
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            
+            // In a real implementation, you would send this data to your server
+            alert(`Thank you! Spiritual guidance will be sent to ${email}.`);
+            
+            // Reset form
+            this.reset();
+        });
+
+        // Donation button handling
+        document.querySelector('.donate-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('Thank you for considering a donation! Your support helps us continue providing free spiritual guidance to all seekers.');
+        });
+
+        // AI Tool Modal Handling
+        const aiModal = document.getElementById('aiModal');
+        const aiToolBtn = document.getElementById('aiToolBtn');
+        const aiModalClose = document.getElementById('aiModalClose');
+
+        aiToolBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            aiModal.style.display = 'flex';
+        });
+
+        aiModalClose.addEventListener('click', function() {
+            aiModal.style.display = 'none';
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', function(e) {
+            if (e.target === aiModal) {
+                aiModal.style.display = 'none';
+            }
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if(this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    document.querySelector('nav ul').classList.remove('show');
+                }
+            });
+        });
+
+        // Add some interactive effects to cards
+        document.querySelectorAll('.solution-card, .sadhana-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>
